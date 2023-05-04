@@ -64,6 +64,10 @@ select {
     gap: var(--gap, 1rem);
 }
 
+.flex-vertical {
+    align-items: center;
+}
+
 .grid {
     display: grid;
     gap: var(--gap, 1rem);
