@@ -298,3 +298,25 @@ tab-list {
 .dot-indicators > [aria-selected="true"] {
     background-color: hsl(var(--clr-white));
 }
+
+.number-indicators > * {
+    cursor: pointer;
+    position: relative;
+    display: grid;
+    place-content: center;
+    aspect-ratio: 1;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 50%;
+    border-color: hsl( var(--clr-white) / .25);
+}
+
+.number-indicators > *:hover,
+.number-indicators > *:focus {
+    border-color: hsl(var(--clr-white) / .5);
+}
+
+.number-indicators > [aria-selected="true"] {
+    background-color: hsl(var(--clr-white));
+    color:hsl( var(--clr-dark))
+}
