@@ -120,6 +120,10 @@ select {
     gap: var(--gap, 1rem);
 }
 
+.d-block {
+    display: block;
+}
+
 .flow > *:where(:not(:first-child)) {
     margin-top: var(--flow-space, 1rem);
 }
@@ -132,26 +136,47 @@ select {
 }
 
 .grid-container {
-    border: 5px solid limegreen;
     display: grid;
+    border: 5px solid limegreen;
+    text-align: center;
+    place-items: center;
+    padding-inline: 1em;
 }
+
+.grid-container * {
+    max-width: 50ch;
+}
+
 
 @media (min-width: 45em) {
     .grid-container {
         column-gap: var(--container-gap, 2rem);
         grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
+        text-align: left;
     }
     
     .grid-container > *:first-child {
         grid-column: 2;
         outline: 1px solid red;
     }
-
+    
     .grid-container > *:last-child {
         grid-column: 3;
         outline: 1px solid yellow;
     }
+    .grid-container--home {
+    padding-bottom: 6rem;
+    align-items: end;
+    }
 }
+
+/* .grid-container > *:first-child {
+    outline: 1px solid red;
+}
+
+.grid-container > *:last-child {
+    outline: 1px solid yellow;
+} */
 
 .sr-only { /* screen reader only (assistive technology for people with visual impairments */
     position: absolute;
@@ -242,6 +267,7 @@ select {
 
 .large-button {
     position: relative;
+    font-size: 2rem; /* we set this font size manually becauses it stays the same at all screen sizes*/
     display: inline-grid;
     z-index: 1;
     place-items: center;
@@ -310,7 +336,7 @@ select {
     border-color: hsl(var(--clr-white) / 1);
 }
 
-tab-list {
+.tab-list {
     --gap: 2rem;
 }
 
