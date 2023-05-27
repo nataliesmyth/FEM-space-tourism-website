@@ -289,6 +289,8 @@ select {
     list-style: none;
     padding: min(20rem, 15vh) 2rem;
     margin: 0;
+    background: hsl( var(--clr-white) / .05);
+    backdrop-filter: blur(3rem);
 }
 
 @media (max-width: 35rem) {
@@ -297,12 +299,10 @@ select {
         position: fixed;
         z-index: 1000;
         inset: 0 0 0 30%;
-        background: hsl( var(--clr-white) / .1);
         list-style: none;
         padding: min(20rem, 15vh) 2rem;
         margin: 0;
         flex-direction: column;
-        backdrop-filter: blur(40px);
     }
 
     .primary-navigation.underline-indicators > .active,
