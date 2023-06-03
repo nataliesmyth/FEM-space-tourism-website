@@ -5,13 +5,16 @@ const navToggle = document.querySelector('.mobile-nav-toggle')
 // console.log(navToggle)
 
 navToggle.addEventListener('click', () => { 
+
     const visibility = nav.getAttribute("data-visible");
     // console.log(visibility)
     // if nav is closed, set to open
     if (visibility === 'false') {
         nav.setAttribute('data-visible', true);
+        navToggle.setAttribute('aria-expanded', true);
     } else {
         nav.setAttribute('data-visible', false)
+        navToggle.setAttribute('aria-expanded', false);
     }
-    console.log(visibility)
+    console.log(navToggle.getAttribute('aria-expanded'))
 })
