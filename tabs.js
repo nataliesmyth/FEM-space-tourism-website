@@ -58,5 +58,5 @@ function changeTabPanel(e) {
         .forEach((picture) => picture.setAttribute("hidden", true));
     
     mainContainer.querySelector([`#${targetImage}`]).removeAttribute('hidden');
-    // console.log(mainContainer);
+    console.log(mainContainer.querySelector([`#${targetImage}`]));
 }

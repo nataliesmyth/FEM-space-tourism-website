@@ -530,7 +530,9 @@ body {
     background-image: url(./starter-code/assets/technology/background-technology-mobile.jpg)
 }
 
-.launch-image-portrait {
+.launch-image-portrait,
+.space-capsule-image-portrait,
+.spaceport-image-portrait {
     display: none;
 }
 
@@ -546,11 +548,15 @@ body {
         background-image: url(./starter-code/assets/technology/background-technology-desktop.jpg);
     }
 
-    .launch-image-portrait {
+    .launch-image-portrait,
+    .space-capsule-image-portrait,
+    .spaceport-image-portrait {
         display: block;
     }
 
-    .launch-image-landscape {
+    .launch-image-landscape,
+    .space-capsule-image-landscape,
+    .spaceport-image-landscape {
         display: none;
     }
 
@@ -715,7 +721,7 @@ body {
 
     .grid-container--destination {
         justify-items: start;
-        align-content: start; /* prevent content from going too far down the page on large screens */
+        align-content: center; /* prevent content from going too far down the page on large screens */
         grid-template-areas:
         '. title title .'
         '. image tabs .'
@@ -723,7 +729,7 @@ body {
     }
 
     .grid-container--destination > picture {
-        max-width: 90%;
+        max-width: 100%;
     }
 
     .destination-meta {
@@ -754,6 +760,7 @@ body {
         justify-self: center;
         grid-template-areas: 
         ' title title . .'
+        'tabs content image .'
         'tabs content image .'
         /* '. . image .' */
         ;   
