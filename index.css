@@ -758,12 +758,17 @@ body {
 
     .grid-container--technology {
         justify-self: center;
+        grid-template-columns: minmax(6rem, 1fr) minmax(2rem, 35rem) minmax(0, 35rem) minmax(1rem, 1fr);
+
         grid-template-areas: 
-        ' title title . .'
+        'title title . .'
         'tabs content image .'
         'tabs content image .'
-        /* '. . image .' */
         ;   
+    }
+
+    .grid-container--technology .numbered-title {
+        margin-left: 1rem;
     }
 
     .grid-container--technology > picture {
