@@ -48,80 +48,80 @@
 /* Reset               */
 /* ------------------- */
 
-/* https://piccalil.li/blog/a-modern-css-reset/ */
+/* https://andy-bell.co.uk/a-more-modern-css-reset/ */
 
-/* Box sizing */
+/* Box sizing rules */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-/* Reset margins */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-figure,
-picture {
-    margin: 0; 
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    font-weight: 400;
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
 }
 
-/* set up the body */
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
 body {
-    font-family: var(--ff-sans-normal);
-    font-size: var(--fs-400);
-    color: hsl( var(--clr-white) );
-    background-color: hsl( var(--clr-dark) );
-    line-height: 1.5;
-    min-height: 100vh;
-    
-    display: grid;
-    grid-template-rows: min-content 1fr;
-
-    overflow: hidden;
+  min-height: 100vh;
+  line-height: 1.5;
 }
 
-/* make images easier to work with */
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
 img,
-picutre {
-    max-width: 100%;
-    display: block;
+picture {
+  max-width: 100%;
+  display: block;
 }
 
-/* make form elements easier to work with */
-input,
-button,
-textarea,
-select {
-    font: inherit;
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
 }
 
-/* remove animations for people who've turned them off */
-@media (prefers-reduced-motion: reduce) {  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
 }
 
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
 
 /* ------------------- */
 /* Utility classes     */
