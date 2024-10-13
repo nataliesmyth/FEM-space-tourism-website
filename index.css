@@ -92,7 +92,7 @@ body {
     display: grid;
     grid-template-rows: min-content 1fr;
 
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* make images easier to work with */
@@ -356,6 +356,9 @@ select {
 }
 
 @media(min-width: 35rem) {
+    body {
+        overflow: hidden;
+    }
     .primary-navigation {
         padding-inline: clamp(3rem, 7vw, 7rem);
     }
