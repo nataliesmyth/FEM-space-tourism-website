@@ -356,9 +356,6 @@ select {
 }
 
 @media(min-width: 35rem) {
-    body {
-        overflow: hidden;
-    }
     .primary-navigation {
         padding-inline: clamp(3rem, 7vw, 7rem);
     }
@@ -374,6 +371,9 @@ select {
     }
 }
 @media (min-width: 45rem){
+    body {
+        overflow: hidden;
+    }
     .primary-header::before {
         content: '';
         display: block;
